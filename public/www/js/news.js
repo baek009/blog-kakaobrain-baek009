@@ -29,11 +29,9 @@ window.addEventListener("load", function () {
       //   allTag = allTag + tag;
       // }
 
-
-      news.innerHTML = allTag; {()
-    // 배열이라면 반복하자.
+      // 배열이라면 반복하자.
       result.forEach((item) => {
-        const tag = `<a href=${item.link} class="list-box"> {
+        const tag = `<a href=${item.link} class="list-box">
         <div class="list-box-img br-20" style="background: url('./images/${item.imgpath}') no-repeat center; background-size: cover"></div>
         <div class="list-box-cate">
           <img src="./images/icon/${item.icon}" alt="${item.category}" />
@@ -44,6 +42,9 @@ window.addEventListener("load", function () {
         </a>`;
         allTag = allTag + tag;
       });
+
+      news.innerHTML = allTag;
+    })
     .catch((error) => {
       console.log(error);
     });
