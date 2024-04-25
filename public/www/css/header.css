@@ -1,18 +1,31 @@
 .header {
   position: fixed;
-  display: block;
   left: 0;
   top: 0;
-  z-index: 999999;
-  /* z-index -> 맨 위로 오게하기 */
 
+  z-index: 999999;
+  display: block;
   width: 100%;
   height: 70px;
   background-color: #ffffff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff;
 }
 .line-active {
   border-bottom: 1px solid #e6e5e6 !important;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(100% - 30px);
+  max-width: 1170px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.header-logo {
 }
 
 .header-logo-link {
@@ -28,19 +41,18 @@
   width: 68px;
   height: 31px;
 }
-
 .swlogo {
   width: 100%;
   height: 100%;
 }
-
 .swlogo .swiper-slide {
-  background: #fff;
+  background: #ffffff;
 }
-/* pmg라서 배경색 흰색을 줌 */
 
 .header-logo-slide img {
   width: 100%;
+}
+.header-navi {
 }
 .navi-list {
   display: flex;
@@ -54,9 +66,11 @@
   color: #1e1e1e;
   font-weight: 700;
 }
+
 .navi-list li a:hover {
   color: #1f24ff;
 }
+
 .navi-search a {
   display: block;
   width: 24px;
@@ -64,6 +78,7 @@
   background: url("../images/icon/icon-search.png") no-repeat center;
   background-size: contain;
 }
+
 .navi-search a:hover {
   background: url("../images/icon/icon-search-hover.png") no-repeat center;
   background-size: contain;
@@ -79,6 +94,10 @@
   background: url("../images/icon/icon-hbr.png") no-repeat center;
   background-size: contain;
 }
+.mobile-menu-open {
+  background: url("../images/icon/icon-close.png") no-repeat center !important;
+  background-size: contain !important;
+}
 
 /* 반응형 */
 @media all and (max-width: 1024px) {
@@ -92,4 +111,63 @@
   .navi-search {
     display: block !important;
   }
+}
+
+/* 모바일 메뉴 관련 */
+/* 모바일 메뉴 : 배경 */
+.mb-header-bg {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+.mb-header-bg-show {
+  display: block !important;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+/* 모바일 메뉴 : 내용 */
+.mb-header-menu {
+  position: fixed;
+  left: 0;
+  top: calc(70px - 1px);
+
+  width: 100%;
+  height: 0;
+  transition: height 0.3s ease-in;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 1);
+  z-index: 9999999;
+}
+.mb-header-menu-show {
+  height: 160px !important;
+}
+
+.mb-header-menu .inner {
+  display: block;
+  height: auto !important;
+}
+
+.mb-nav {
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.mb-nav li {
+  line-height: 40px;
+}
+.mb-nav li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+.mb-nav li a:hover {
+  color: #1f24ff;
 }

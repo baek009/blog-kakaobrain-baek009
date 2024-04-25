@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR:wght@100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -11,31 +10,17 @@
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
+
 html {
   overflow-x: hidden;
 }
-/* 스크롤바 안생기게 함 이거 무조건 해라 */
-
 body {
   font-family: "Inter", "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-
-  font-variation-settings: "slnt" 0;
-}
-
-.inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: calc(100% - 30px);
-  max-width: 1170px;
-  height: 70px;
-  margin: 0 auto;
 }
 
 .br-20 {
@@ -52,19 +37,17 @@ body {
 }
 .bt-more {
   display: block;
-  padding: 11px 20px;
-  line-height: 20px;
-  border: 1px solid #000;
-
-  border-radius: 30px;
+  border: 1px solid #000000;
+  border-radius: 20px;
   font-size: 14px;
   font-weight: 700;
-
-  transition: all 0.1s ease-in;
+  padding: 11px 20px;
+  line-height: 20px;
+  transition: all 0.1s;
 }
 .bt-more:hover {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
 }
 
 .wrap {
